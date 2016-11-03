@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<!-- test10272016 yabao_ELPM webkit-->
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>CHBTGA | test1101</title>
+	<script src="http://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+	<style type="text/css">
+		body {
+			position: relative;
+			background-color: white;
+			min-height:100%;
+			padding-bottom: 20px;
+
+		}
+		.body{
+			width: 70%;
+			height: auto;
+			background-color: #00DDAA;
+			margin: auto;
+			height: 1200px;
+			min-width: 1200px;
+		}
+		header {
+			background-color: #00DDAA;
+			margin: auto;
+			width: 70%;
+			text-align: center;
+			color:  white;
+			text-shadow: 1px 1px 1px black;
+			border-radius: 10%;
+		}
+		.wrap {
+			color: black;
+			text-shadow: 1px 1px 1px white;
+			position: relative;
+			width: 1200px;
+			margin-left: 25%;
+			text-align: left;
+			height: auto;
+		}
+		li {
+   	 		display: block;
+   	 		float: left;
+   	 		list-style: none;
+   	 		width: 25%;
+   	 		font-size: 25px;
+		}
+		.btn,.btn-p{
+			width: 300px;
+			margin:auto;
+			text-align: center;
+		}
+		a:link{color: #00DDAA; text-decoration:none;}
+		a:visited{color: black;  text-decoration:underline;}
+		a:hover{color:  white; text-decoration:underline;}
+		a:active{color: #00a9a4}
+		#cav {
+			position: fixed;
+			bottom: 0;
+			background-color: #00DDAA;
+			width: 69.5%;
+			
+			text-align: center;
+			color: black;
+			text-shadow: 3px 3px 5px white;
+			border-radius: 10%;
+			height: 20px;
+		}
+		hr {
+			width: 70%;
+			align:center;
+		}
+		button {
+			width: 100px;
+			height: 60px;
+			margin-top: 100px;
+			margin-right: -400px;
+			font-size: 18px;
+			border-radius: 20%;
+		}
+		button:hover {
+			background-color: yellow;
+			width: 100px;
+			height: 60px;
+			margin-top: 100px;
+			margin-right:-400px;
+			color: #00DDAA;
+			font-size: 25px;
+			border-radius: 15%;
+		}
+
+		.recommendation1,.recommendation2,.recommendation3,.recommendation4 {
+			width: 75%;
+			height: auto;
+			box-shadow: 7px 15px 3px 5px #999;
+			border:10px outset #00DDAA;
+			margin-top: 0;
+			margin-left: 15%;
+			height: 800px;
+			min-width: 1200px;
+		}
+		.recommendation1 header {
+			background-color: #00DDAA;
+			margin: auto;
+			width: 80%;
+			text-align: center;
+			color:  white;
+			text-shadow: 1px 1px 1px black;
+			border-radius: 10%;
+		}
+
+		.outer {
+			border:5px outset #00DDAA;
+			width: 80%;
+			font-size: 25px;
+		}
+		.inner {
+			text-align: left;
+			width: 100%;
+			margin: 0;
+		}
+		.tdq {
+			
+			text-align: center;
+			color: green;
+		} 
+		.tda {
+			color: red;
+			text-align: center;
+		}
+
+		#recopy {
+			position: absolute;
+			bottom: 40px;
+			width: 70%;
+			text-align: center;
+			color: black;
+			text-shadow: 3px 3px 5px white;
+		}
+		#recopy a:link{color: #00DDAA; text-decoration:none;}
+		#recopy a:visited{color: black;  text-decoration:underline;}
+		#recopy a:hover{color:  #00DDAA; text-decoration:underline;}
+		#recopy a:active{color: #00a9a4}
+		.recommendation1 p {
+			font-size: 30px;
+		}
+
+
+	</style>
+	
+
+	<script type="text/javascript">
+		function ResetPage()
+ 	 	{
+  			window.location.reload();
+  		}
+  		function qshow()
+  		{
+  			documents.getElementByName(q).style.display='block';
+  		}
+
+
+  		$(document).ready(function(){
+
+  			$("#radio-choice1").click(function(){
+  				var a1 = $('input[name="radio-btn-choice"]:checked').val();
+ 			$(".q").hide();
+  			});
+  			$("#radio-choice2").click(function(){
+  				var a1 = $('input[name="radio-btn-choice"]:checked').val();
+  			$(".q").show();
+  			});
+
+  			$(".btn").click(function(){
+  			var q1 = $('input[name="radio-btn-choice"]:checked').val();
+  			var q2 = $('input[name="radio-btn-alt"]:checked').val();
+  			var q3 = $('input[name="radio-btn-HBV-DNA"]:checked').val();
+  		
+  			if(q1 =="Yes"){
+  				
+  				$(".body").hide();
+  				$(".recommendation1").show();
+  				$(".Treatment-yes").show();
+  				$(".CIRRHOSIS").text(q1);
+  				$(".ALT-level").text(q2);
+				$(".HBV-DNA-level").text(q3); 
+  				return;
+  			}else if(q1 == null){
+  				alert("Make a chioce please!");
+  				return;
+  			}else if(q1 =="No" && q2 =="Persistently Abnormal" && q3 =="≥ 20,000 IU/mL"){
+  				$(".body").hide();
+  				$(".recommendation1").show();
+  				$(".inner").show();
+				$(".CIRRHOSIS").text(q1);
+  				$(".ALT-level").text(q2);
+				$(".HBV-DNA-level").text(q3);
+  				return
+  			}else{
+  				$(".body").hide();
+  				$(".recommendation1").show();
+  				$(".no-treatment").show();
+				$(".CIRRHOSIS").text(q1);
+  				$(".ALT-level").text(q2);
+				$(".HBV-DNA-level").text(q3); 
+  			}
+
+  			});
+			
+			
+		});
+
+		function printpage()
+  		{
+  			window.print()
+  		}
+
+		
+
+
+	</script>
+</head>
+
+<body>
+	<div class="body" style="display:block;">
+	<header align="center">
+		<h1>Chronic Hepatitis B Treatment Guideline For Adults</h1>
+	</header><hr>
+<!-- form body-->
+	<form class="wrap" method="post" action="#"  autocomplete="off">
+	<!-- 1-->
+		<h2 id="qcirrhosis">1 Does your patient have CIRRHOSIS?</h2>
+		<ul>
+			<li><input type="radio" id="radio-choice1" name="radio-btn-choice" onclick="" value="Yes"><label for="radio-choice1">Yes</label></li>
+			<li><input type="radio" id="radio-choice2" name="radio-btn-choice" value="No"><label for="radio-choice2">No</label></li></li>
+		</ul>
+		<br>
+		<br><br>
+
+	<!-- 2-->
+		<h2 id="qacl">2 What is your patient's ALT level?</h2>
+		<ul>
+			<li><input type="radio" id="altpa" name="radio-btn-alt" value="Persistently Abnormal"><label for="altpa">Persistently Abnormal</label></li>
+			<li><input type="radio" id="altia" name="radio-btn-alt" value="Intermittently Abnormal"><label for="altia">Intermittently Abnormal</label></li></li>
+			<li><input type="radio" id="altpn" name="radio-btn-alt" value="Persistently Normal"><label for="altpn">Persistently Normal</label></li></li>
+		</ul><br><br><br>
+
+	<!-- 3-->
+		<h2 id="qhbv-dna">3 What is your patient's HBV DNA level?</h2>
+		<ul>
+			<li><input type="radio" id="hbvdna1" name="radio-btn-HBV-DNA" value="≥ 20,000 IU/mL"><label for="hbvdna1">&ge; &nbsp;20,000 IU/mL</label></li>
+			<li><input type="radio" id="hbvdna3" name="radio-btn-HBV-DNA" value="&lt; &nbsp;20,000 IU/mL"><label for="hbvdna3">&lt; &nbsp;20,000 IU/mL</label></li></li>
+		</ul>
+		
+
+		<br><br><br><br><br><br>
+
+	
+
+	
+
+	<!-- submit-->
+	<div class="btn">
+		<button type="button">Submit</button>&nbsp;
+		
+	</div>
+	</form>
+	<!-- ...................................................Footer -->
+
+	<div align="center" id="cav" >
+	<font color="black">&copy;<a href="http://med.stanford.edu/liver.html" target="_blank" title="Asian Liver Center at Stanford University">Asian Liver Center at Stanford University | 2016</a></font>
+	</div>
+
+	</div>
+
+<!-- recommendation1-->
+<div class="recommendation1" style="display:none;">
+	<header align="center">
+		<h1>Chronic Hepatitis B Treatment Guideline For Adults</h1>
+	</header><hr>
+
+	<!-- sub_body-->
+	<table align="center" cellspacing="5" border="5"  cellpadding="10" class="outer">
+	
+	<tr>
+	<th style="border: 5px solid">Question</th>
+	<th width="30%" style="border: 5px solid">Answer</th>
+	</tr>
+	<tbody>
+	<tr>
+	<td class="tdq">Does your patient have CIRRHOSIS?</td>
+	<td class="CIRRHOSIS tda"></td>
+	</tr>
+	<tr>
+	<td class="tdq">What is your patient's ALT level?</td>
+	<td class="ALT-level tda"></td>
+	</tr>
+	<tr>
+	<td class="tdq">What is your patient's HBV DNA level?</td>
+	<td class="HBV-DNA-level tda"></td>
+	</tr>
+	<tr>
+	<th colspan="2" style="border: 5px solid">Treatment</th>
+	</tr>
+<!--no_treatment -->
+	<tr style="display:none;" class="inner">
+	<td colspan="2">
+		<table class="inner" width="100%">
+<!-- 6 mouths-->
+		<table class="inner" border bgcolor="#ffff00">
+			<tr>
+				<td width="25%" align="center" bgcolor="gray" style="color:white; font-size: 20px;">Every 6 mouths</td>
+				<td rowspan="2">
+					<table>
+						<tr>
+							<th>DETECTION OF HCC'</th>
+						</tr>
+						<tr>
+							<td>(persons with cirrgosis or HCC family history)</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+<!-- 12 mouths-->
+		<table class="inner" border bgcolor="#ffff00">
+			<tr>
+				<td width="25%" align="center" bgcolor="gray" style="color:white; font-size: 20px;">Every 12 mouths</td>
+				<td rowspan="2">
+					<table>
+						<tr>
+							<th>DISEASE PROGRESSION AND/OR TREATMENT RESPONSE IN ALL'</th>
+						</tr>
+						<tr>
+							<td>&bull;&nbsp;Adherence at each visit, if on treatment<br>&bull;&nbsp;ALT, HBV DNA and HBeAg<br>&bull;&nbsp;Clinical criteria and NITs (APRI in adults or FlibroScan)</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+<!-- baseline and 12 mouths-->
+		<table class="inner" border bgcolor="#ffff00">
+			<tr>
+				<td width="25%" align="center" bgcolor="gray" style="color:white;font-size: 20px;">Baseline and every 12 mouths</td>
+				<td rowspan="2">
+					<table style="padding:5px auto">
+						<tr>
+							<th>TOXICITY MONITORING IN PERSONS ON TRESTMENT</th>
+						</tr>
+						<tr>
+							<td>Renal function<sup>g</sup> and  risk factors for renal dyfunction</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+
+			</td>
+<!--yes_treatment -->
+	<tr class="Treatment-yes" style="display:none;">
+	<td border bgcolor="#ffff00" width="100%" colspan="2" align="center">&bull;&nbsp;Lifelong treatment</td>
+	</tr>
+
+<!--notreatment -->
+	<tr class="no-treatment" style="display:none;">
+	<td border bgcolor="#ffff00" width="100%" colspan="2" align="center">&bull;&nbsp;No treatment. <br>Thanks for your time!</td>
+	</tr>
+
+
+		</table>
+
+
+	</tr>
+	</tbody>
+	</table>
+
+	
+
+	
+	<!-- .....Footer -->
+
+	<div align="center" id="recopy" >
+	<font color="black">&copy;<a href="http://med.stanford.edu/liver.html" target="_blank" title="Asian Liver Center at Stanford University">Asian Liver Center at Stanford University | 2016</a></font>
+	</div>
+
+</div>
+
+
+
+
+
+<!-- recommendation2-->
+
+
+<!-- recommendation3-->
+
+
+<!-- recommendation4-->
+
+
+
+</body>
+
+</html>
