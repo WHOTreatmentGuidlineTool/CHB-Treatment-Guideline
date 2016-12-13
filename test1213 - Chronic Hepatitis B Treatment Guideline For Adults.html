@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<!--10272016~ yabao_ELPM webkit-->
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>CHBTGA | test1213</title>
+	
+	<script type="text/javascript">
+	document.createElement("nav" );
+	document.createElement("header" );
+	document.createElement("footer" );
+	document.createElement("section" );
+	document.createElement("aside" );
+	document.createElement("article" );
+	</script>
+	
+	<script src="http://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+	<style type="text/css">
+		body {
+			position: relative;
+			background-color: white;
+			min-height:100%;
+			padding-bottom: 20px;
+
+		}
+		.body{
+			width: 70%;
+			
+			background-color: #00DDAA;
+			margin: auto;
+			height: 1000px;
+			min-width: 300px;
+			
+		}
+		#header1 {
+			background-color: darkred;
+			margin: auto;
+			width: 100%;
+			text-align: center;
+			color:  white;
+			text-shadow: 1px 1px 1px black;
+			
+		}
+		#caculator-apri  header,#caculator-fib header {
+			display: block;
+			
+			margin: auto;
+			width: auto;
+			text-align: center;
+		
+			
+			
+		}
+		.wrap {
+			color: black;
+			text-shadow: 1px 1px 1px white;
+			position: relative;
+			width: 100%;
+			margin:auto;
+			justify-content:space-between;
+			height: auto;
+			
+		}
+		#ul-2 {
+			justify-content:space-between;
+		}
+		#caculator-apri,#caculator-fib {
+			background-color: white;
+			text-shadow: 1px 1px 1px white;
+			color: black;
+			width: 70%;
+			height: 1000px;
+			margin-left: 18%;
+			
+			border:5px outset #00DDAA;
+			margin-top: 15px;
+			min-width: 300px;
+			
+
+		}
+		li {
+   	 		display: block;
+   	 		float: left;
+   	 		list-style: none;
+   	 		width: 30%;
+   	 		font-size: 25px;
+		}
+		.btn,.btn-p{
+			width: 350px;
+			margin:auto;
+			text-align: center;
+		}
+		a:link{color: gray; text-decoration:none;}
+		#caculator-apri  a:link{color: black; text-decoration:none;}
+		#caculator-fib a:link{color: black; text-decoration:none;}
+		a:visited{color: black;  text-decoration:underline;}
+		a:hover{color: white; text-decoration:underline;}
+		a:active{color: #00a9a4}
+	
+
+
+
+		#cav {
+			position: fixed;
+			bottom: 0;
+			background-color: darkred;
+			width: 69.5%;
+			
+
+			
+			text-align: center;
+			color: #00DDAA;
+			text-shadow: 0px 0px 5px black;
+			
+			height: 20px;
+		}
+		hr, header h3{
+			width: 70%;
+			margin:auto;
+		}
+
+		header h3 {
+			background-color: #00DDAA;
+			opacity:0.8;
+			border-radius: 15%;
+
+		}
+		header h3:first-letter {
+   			font-size: 2em;
+   			color: red;
+		}
+
+		.interpretation {
+			background-color: #00DDAA;
+			width: 70%;
+			margin:auto;
+			font-size: 1.1em;
+			
+		}
+		.interpretation-header{
+			font-size: 1.5em;
+   			color: white;
+		}
+
+		button {
+			width: 100px;
+			height: 60px;
+			margin-top: 100px;
+			margin-right: -400px;
+			font-size: 20px;
+			border-radius: 20%;
+		}
+		button:hover {
+			background-color: yellow;
+			width: 100px;
+			height: 60px;
+			margin-top: 100px;
+			margin-right:-400px;
+			color: #00DDAA;
+			font-size: 25px;
+			border-radius: 15%;
+		}
+
+		.recommendation1,.recommendation2,.recommendation3,.recommendation4 {
+			width: 75%;
+			height: auto;
+			
+			/*border:5px outset black;*/
+			margin-top: 0;
+			margin-left: 15%;
+			height: 800px;
+			min-width: 1200px;
+		}
+		.recommendation1 header {
+			background-color: darkred;
+			margin: auto;
+			width: 80%;
+			text-align: center;
+			color:  white;
+			text-shadow: 1px 1px 1px black;
+			border-radius: 10%;
+		}
+
+		.outer {
+			border:5px outset #00DDAA;
+			width: 80%;
+			font-size: 25px;
+		}
+		.inner {
+			text-align: left;
+			width: 100%;
+			margin: 0;
+		}
+		.tdq {
+			
+			text-align: center;
+			color: green;
+		} 
+		.tda {
+			color: red;
+			text-align: center;
+		}
+
+		#recopy {
+			position: absolute;
+			bottom: 40px;
+			width: 70%;
+			text-align: center;
+			color: #00DDAA;
+			text-shadow: 3px 3px 5px white;
+		}
+		#recopy a:link{color: #00DDAA; text-decoration:none;}
+		#recopy a:visited{color: black;  text-decoration:underline;}
+		#recopy a:hover{color:  #00DDAA; text-decoration:underline;}
+		#recopy a:active{color: #00a9a4}
+		.recommendation1 p {
+			font-size: 30px;
+		}
+		em {
+			font-size: 18px;
+		}
+	
+
+		.input-ca,.input-ca-fib {
+			
+			padding: 4px 4px; 
+			width: 30%; 
+			border: 2px solid  #00DDAA; 
+			
+		}
+
+		.input-ca ~ .focus-border,.input-ca-fib ~ .focus-border {
+			position: absolute; 
+			bottom: 0; 
+			
+			width: 20%; 
+			height: 2px; 
+			background-color: #00DDAA; 
+			transition: 0.6s;}
+		.input-ca:focus ~ .focus-border,
+		.has-content.input-ca ~ .focus-border{width: 100%; 
+			transition: 2s; 
+			left: 0;
+		}
+		.ca {
+
+			width: 70%;
+			font-size: 20px;
+			margin:auto;
+		}
+		.ca label{
+			display: inline-block;
+			
+			text-align: left;
+		}
+		.input-ca, .input-ca-fib {
+			font-size:20px; 
+		}
+		.result-ca,.result-ca-fib {
+			position: relative;
+			float: left;
+			width: 20%;
+			height: 40px;
+			background-color: #00DDAA;
+			color: white;
+			text-align: center;
+			font-size: 2em;
+		}
+		.back {
+			position: relative;
+			float: right;
+			text-align: center;
+			height: 40px;
+			background-color:  black;
+			color: white;
+			border-radius: 90%;
+		}
+		.btn-ca {
+			position: relative;
+			margin-right: 500px;
+		}
+		/* 768px and up
+-- This is for desktops, iPads and other tablets */
+		@media only screen and (min-width: 768px) {
+			.wrap {
+				color: black;
+				text-shadow: 1px 1px 1px white;
+				position: relative;
+				width: 100%;
+				margin:auto;
+				margin-left: 10%;
+				justify-content:space-between;
+				height: auto;
+				
+			}
+			#caculator-apri,#caculator-fib {
+				background-color: white;
+				text-shadow: 1px 1px 1px white;
+				color: black;
+				width: 70%;
+				height: 1000px;
+				margin: auto;
+				min-width: 530px;
+				border:5px outset #00DDAA;
+				margin-top: 15px;
+			
+
+			}
+			#cav {
+				min-width: 300px;
+
+			}
+			button {
+				width: 100px;
+				height: 60px;
+				margin-top: 100px;
+				margin-right: -40%;
+				font-size: 20px;
+				border-radius: 20%;
+			}
+			button:hover {
+				background-color: yellow;
+				width: 100px;
+				height: 60px;
+				margin-top: 100px;
+				margin-right:-40%;
+				color: #00DDAA;
+				font-size: 25px;
+				border-radius: 15%;
+			}
+
+
+		 
+		}
+		/* From 600px-767px, not beyond
+-- It's for resizing a desktop browser */
+		@media only screen and (min-width: 600px)
+		and (max-width: 768px)
+		{
+		  wrap {
+				
+				color: black;
+				text-shadow: 1px 1px 1px white;
+				position: relative;
+				width: 100%;
+				margin:auto;
+				margin-left: 10%;
+				justify-content:space-between;
+				height: 800px;
+			
+			}
+			h2, li {
+				color: black;
+				font-size: 1em;
+			}
+			#caculator-apri,#caculator-fib {
+				background-color: white;
+				text-shadow: 1px 1px 1px white;
+				color: black;
+				width: 70%;
+				height: 800px;
+				margin: auto;
+				font-size: 1em;
+				border:2px outset #00DDAA;
+				margin-top: 15px;
+			
+
+			}
+			#cav {
+				width: 70%;
+				margin: auto;
+			}
+			button {
+				width: 100px;
+				height: 60px;
+				margin-top: 30px;
+				margin-right: -40%;
+				font-size: 20px;
+				border-radius: 20%;
+			}
+			button:hover {
+				background-color: yellow;
+				width: 100px;
+				height: 60px;
+				margin-top: 30px;
+				margin-right:-40%;
+				color: #00DDAA;
+				font-size: 25px;
+				border-radius: 15%;
+			}
+
+			.input-ca, .input-ca-fib {
+				border: 0; 
+				padding: 4px 4px; 
+				width: 20%; 
+				border: 2px solid  #00DDAA; 
+				border-radius: 20%;
+			}
+
+			.input-ca ~ .focus-border{
+				position: absolute; 
+				bottom: 0; 
+				
+				width: 20%; 
+				height: 2px; 
+				background-color: #00DDAA; 
+				transition: 0.6s;}
+			.input-ca:focus ~ .focus-border,
+			.has-content.input-ca ~ .focus-border{width: 100%; 
+				transition: 2s; 
+				left: 0;
+			}
+			.ca {
+				border-color: #00DDAA;
+				font-size: 10px;
+				margin-right: 30px;
+			}
+			.input-ca, .input-ca-fib {
+				font-size:10px; 
+			}
+			.result-ca,.result-ca-fib {
+				position: relative;
+				float: right;
+				margin-right: 50px;
+				width: 20%;
+				height: 60px;
+				background-color: #00DDAA;
+				color: white;
+				border-radius: 10%;
+				font-size:13px; 
+			}
+		}
+
+
+		/* 480px and up
+		-- It's for larger mobile phones such as HTC models
+		-- and iPhone in landscapemode */
+		@media only screen and (min-width: 480px) and (max-width: 600px) {
+
+		    wrap {
+				
+				color: black;
+				text-shadow: 1px 1px 1px white;
+				position: relative;
+				width: 100%;
+				margin:auto;
+				margin-left: 10%;
+				justify-content:space-between;
+				height: 800px;
+			
+			}
+			h2, li {
+				color: black;
+				font-size: 0.9em;
+			}
+			#caculator-apri,#caculator-fib {
+				background-color: white;
+				text-shadow: 1px 1px 1px white;
+				color: black;
+				width: 70%;
+				height: 800px;
+				margin: auto;
+				font-size: 1em;
+				border:2px outset #00DDAA;
+				margin-top: 15px;
+			
+
+			}
+			#cav {
+				width: 70%;
+				margin: auto;
+			}
+			button {
+				width: 100px;
+				height: 60px;
+				margin-top: 30px;
+				margin-right: -40%;
+				font-size: 20px;
+				border-radius: 20%;
+			}
+			button:hover {
+				background-color: yellow;
+				width: 100px;
+				height: 60px;
+				margin-top: 30px;
+				margin-right:-40%;
+				color: #00DDAA;
+				font-size: 25px;
+				border-radius: 15%;
+			}
+
+			.input-ca, .input-ca-fib {
+				border: 0; 
+				padding: 4px 4px; 
+				width: 15%; 
+				border: 2px solid  #00DDAA; 
+				border-radius: 20%;
+			}
+
+			.input-ca ~ .focus-border{
+				position: absolute; 
+				bottom: 0; 
+				
+				width: 20%; 
+				height: 2px; 
+				background-color: #00DDAA; 
+				transition: 0.6s;}
+			.input-ca:focus ~ .focus-border,
+			.has-content.input-ca ~ .focus-border{width: 100%; 
+				transition: 2s; 
+				left: 0;
+			}
+			.ca {
+				border-color: #00DDAA;
+				font-size: 10px;
+				margin-right: 30px;
+			}
+			.input-ca, .input-ca-fib {
+				font-size:10px; 
+			}
+			.result-ca, .result-ca-fib {
+				position: relative;
+				float: right;
+				margin-right: 50px;
+				width: 20%;
+				height: 60px;
+				background-color: #00DDAA;
+				color: white;
+				border-radius: 10%;
+				font-size:13px; 
+			}
+			#qhbv-dna {
+				margin-top: 50px;
+			}
+
+
+		 
+		}
+		/* 320px and up
+-- It's for the iPhone, iPod touch and other Adroid
+-- and mobile phones in portrait mode */
+		@media only screen and (max-width: 480px) {
+
+		    wrap {
+				
+				color: black;
+				text-shadow: 1px 1px 1px white;
+				position: relative;
+				width: 100%;
+				margin:auto;
+				margin-left: 10%;
+				justify-content:space-between;
+				height: 800px;
+			
+			}
+			h2, li {
+				color: black;
+				font-size: 0.9em;
+			}
+			#caculator-apri,#caculator-fib {
+				background-color: white;
+				text-shadow: 1px 1px 1px white;
+				color: black;
+				width: 70%;
+				height: 800px;
+				margin: auto;
+				font-size: 1em;
+				border:2px outset #00DDAA;
+				margin-top: 15px;
+			
+
+			}
+			#cav {
+				width: 70%;
+				margin: auto;
+			}
+			button {
+				width: 100px;
+				height: 60px;
+				margin-top: 30px;
+				margin-right: -40%;
+				font-size: 20px;
+				border-radius: 20%;
+			}
+			button:hover {
+				background-color: yellow;
+				width: 100px;
+				height: 60px;
+				margin-top: 30px;
+				margin-right:-40%;
+				color: #00DDAA;
+				font-size: 25px;
+				border-radius: 15%;
+			}
+
+			.input-ca, .input-ca-fib {
+				border: 0; 
+				padding: 4px 4px; 
+				width: 15%; 
+				border: 2px solid  #00DDAA; 
+				border-radius: 20%;
+			}
+
+			.input-ca ~ .focus-border{
+				position: absolute; 
+				bottom: 0; 
+				
+				width: 20%; 
+				height: 2px; 
+				background-color: #00DDAA; 
+				transition: 0.6s;}
+			.input-ca:focus ~ .focus-border,
+			.has-content.input-ca ~ .focus-border{width: 100%; 
+				transition: 2s; 
+				left: 0;
+			}
+			.ca {
+				border-color: #00DDAA;
+				font-size: 10px;
+				margin-right: 30px;
+			}
+			.input-ca, .input-ca-fib {
+				font-size:10px; 
+			}
+			.result-ca, .result-ca-fib {
+				position: relative;
+				float: right;
+				margin-right: 50px;
+				width: 20%;
+				height: 60px;
+				background-color: #00DDAA;
+				color: white;
+				border-radius: 10%;
+				font-size:13px; 
+			}
+			#qhbv-dna {
+				margin-top: 90px;
+			}
+
+		 
+		}
+		
+
+	</style>
+	
+
+	<script type="text/javascript">
+		function ResetPage()
+ 	 	{
+  			window.location.reload();
+  		}
+  		function qshow()
+  		{
+  			documents.getElementByName(q).style.display='block';
+  		}
+
+  		function checkInt(o){ 
+				theV=isNaN(parseInt(o.value))?0:parseInt(o.value); 
+				if(theV!=o.value){o.value=theV;} 
+					var AST =$('input[name="AST"]').val();
+					var ULN =$('input[name="ULN"]').val(); 
+					var PC =$('input[name="PC"]').val();
+
+					var result = (AST/ULN)*100/PC;
+					$(".result-ca").text(result.toFixed(2));
+
+
+					var AGE =$('input[name="AGE"]').val();
+				var ALT =$('input[name="ALT"]').val();
+
+				var result2 = (AGE * AST ) / (PC * Math.sqrt(ALT));
+				$(".result-ca-fib").text(result2.toFixed(3));
+
+
+				
+			} 
+
+
+
+
+  		$(document).ready(function(){
+
+  			$("#radio-choice1").click(function(){
+  				var a1 = $('input[name="radio-btn-choice"]:checked').val();
+ 			$(".q").hide();
+  			});
+  			$("#radio-choice2").click(function(){
+  				var a1 = $('input[name="radio-btn-choice"]:checked').val();
+  			$(".q").show();
+  			});
+
+  			
+			
+			$(".input-ca").focusout(function(){
+				if($(this).val() != ""){
+					$(this).addClass("has-content");
+				}else{
+					$(this).removeClass("has-content");
+				}
+			});
+
+
+	
+
+
+			$(".input-ca").keyup(function() {
+				/* Act on the event */
+				var AST =$('input[name="AST"]').val();
+				var ULN =$('input[name="ULN"]').val(); 
+				var PC =$('input[name="PC"]').val();
+
+				var result1 = (AST/ULN)*100/PC;
+				$(".result-ca").text(result1.toFixed(3));
+				
+			}).click(function(){
+				$(this).keyup();
+			});
+
+			$(".input-ca").bind('input AST', function() {
+				/* Act on the event */
+				keyup();
+			});
+			$(".input-ca").bind('input ULN', function() {
+				/* Act on the event */
+				keyup();
+			});
+			$(".input-ca").bind('input PC', function() {
+				/* Act on the event */
+				keyup();
+			});
+
+
+
+
+			$(".input-ca-fib").keyup(function() {
+				/* Act on the event */
+				var AGE =$('input[name="AGE-fib"]').val();
+				var AST =$('input[name="AST-fib"]').val(); 
+				var PC =$('input[name="PC-fib"]').val();
+				var ALT =$('input[name="ALT-fib"]').val();
+				var ALT01 =  Math.sqrt(ALT);
+				var result2 = (AGE * AST ) / (PC * ALT01);
+				$(".result-ca-fib").text(result2.toFixed(3));
+				
+			}).click(function(){
+				$(this).keyup();
+			});
+
+			$(".input-ca-fib").bind('input AGE-fib', function() {
+				/* Act on the event */
+				keyup();
+			});
+			$(".input-ca-fib").bind('input AST-fib', function() {
+				/* Act on the event */
+				keyup();
+			});
+			$(".input-ca-fib").bind('input PC-fib', function() {
+				/* Act on the event */
+				keyup();
+			});
+			$(".input-ca-fib").bind('input ALT-fib', function() {
+				/* Act on the event */
+				keyup();
+			});
+			
+
+
+
+
+  			$(".btn").click(function(){
+  			var q1 = $('input[name="radio-btn-choice"]:checked').val();
+  			var q2 = $('input[name="radio-btn-alt"]:checked').val();
+  			var q3 = $('input[name="radio-btn-HBV-DNA"]:checked').val();
+  		
+  			if(q1 =="Yes"){
+  				
+  				$(".body").hide();
+  				$(".recommendation1").show();
+  				$(".Treatment-yes").show();
+  				$(".CIRRHOSIS").text(q1);
+  				$(".ALT-level").text(q2);
+				$(".HBV-DNA-level").text(q3); 
+				$("#caculator-apri").hide();
+				$("#caculator-fib").hide();
+  				return;
+  			}else if(q1 == null){
+  				alert("Make a chioce please!");
+  				return;
+  			}else if(q1 =="No" && q2 =="Persistently Abnormal" && q3 =="≥ 20,000 IU/mL"){
+  				$(".body").hide();
+  				$(".recommendation1").show();
+  				$(".inner").show();
+				$(".CIRRHOSIS").text(q1);
+  				$(".ALT-level").text(q2);
+				$(".HBV-DNA-level").text(q3);
+				$("#caculator-apri").hide();
+				$("#caculator-fib").hide();
+  				return
+  			}else{
+  				$(".body").hide();
+  				$(".recommendation1").show();
+  				$(".no-treatment").show();
+				$(".CIRRHOSIS").text(q1);
+  				$(".ALT-level").text(q2);
+				$(".HBV-DNA-level").text(q3); 
+				$("#caculator-apri").hide();
+				$("#caculator-fib").hide();
+  			}
+
+  			});
+			
+			
+		});
+
+		function printpage()
+  		{
+  			window.print()
+  		}
+
+		
+
+
+	</script>
+</head>
+
+<body>
+	<div class="body" style="display:block;">
+		<header align="center" id="header1">
+			<h1>Chronic Hepatitis B Treatment Guideline For Adults</h1>
+		</header><hr>
+	<!-- form body-->
+		<form class="wrap" method="post" action="#"  autocomplete="off">
+		<!-- 1-->
+			<h2 id="qcirrhosis">1 Does your patient have CIRRHOSIS?</h2>
+			<ul>
+				<li><input type="radio" id="radio-choice1" name="radio-btn-choice" onclick="" value="Yes"><label for="radio-choice1">Yes</label></li>
+				<li><input type="radio" id="radio-choice2" name="radio-btn-choice" value="No"><label for="radio-choice2">No</label></li>
+				<li><input type="radio" id="radio-choice3" name="radio-btn-choice" value="Don't know"><label for="radio-choice3">Don't know<br>(<a href="#caculator-apri" title="click to caculate">APRI Score </a> &amp; <a href="#caculator-fib" title="click to caculate">FIB-4 Score</a>)</label></li>
+			</ul>
+			<br>
+			<br><br><br><br><br><br>
+
+		<!-- 2-->
+			<h2 id="qacl">2 What is your patient's ALT level?</h2>
+			<ul>
+				<li><input type="radio" id="altpa" name="radio-btn-alt" value="Persistently Abnormal"><label for="altpa">Persistently Abnormal <br>  <em>&nbsp;&nbsp;&nbsp;&nbsp;(> 60 U/L in man <br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;> 40 U/L in women)</em></label></li>
+				<li><input type="radio" id="altia" name="radio-btn-alt" value="Intermittently Abnormal"><label for="altia">Intermittently Abnormal</label></li></li>
+				<li><input type="radio" id="altpn" name="radio-btn-alt" value="Persistently Normal"><label for="altpn">Persistently Normal</label></li></li>
+			</ul><br><br><br><br><br><br><br><br>
+
+		<!-- 3-->
+			<h2 id="qhbv-dna">3 What is your patient's HBV DNA level?</h2>
+			<ul class="ul-2">
+				<li><input type="radio" id="hbvdna1" name="radio-btn-HBV-DNA" value="≥ 20,000 IU/mL"><label for="hbvdna1">&ge; &nbsp;20,000 IU/mL</label></li>
+				<li><input type="radio" id="hbvdna3" name="radio-btn-HBV-DNA" value="&lt; &nbsp;20,000 IU/mL"><label for="hbvdna3">&lt; &nbsp;20,000 IU/mL</label></li></li>
+			</ul>
+			
+
+			<br><br><br><br><br><br><br><br>
+
+		
+
+		
+
+			<!-- submit-->
+			<div class="btn">
+				<button type="button">Submit</button>&nbsp;
+				
+			</div>
+		</form>
+		<!-- ...................................................Footer -->
+
+		<div align="center" id="cav" >
+		<font color="black">&copy;<a href="http://med.stanford.edu/liver.html" target="_blank" title="Asian Liver Center at Stanford University">Asian Liver Center at Stanford University | 2016</a></font>
+		</div>
+
+	</div>
+
+<!-- recommendation1-->
+<div class="recommendation1" style="display:none;">
+	<header align="center">
+		<h1>Chronic Hepatitis B Treatment Guideline For Adults</h1>
+	</header><hr>
+
+	<!-- sub_body-->
+	<table align="center" cellspacing="5" border="5"  cellpadding="10" class="outer">
+	
+	<tr>
+	<th style="border: 5px solid #00DDAA">Question</th>
+	<th width="30%" style="border: 5px solid #00DDAA">Answer</th>
+	</tr>
+	<tbody>
+	<tr>
+	<td class="tdq">Does your patient have CIRRHOSIS?</td>
+	<td class="CIRRHOSIS tda"></td>
+	</tr>
+	<tr>
+	<td class="tdq">What is your patient's ALT level?</td>
+	<td class="ALT-level tda"></td>
+	</tr>
+	<tr>
+	<td class="tdq">What is your patient's HBV DNA level?</td>
+	<td class="HBV-DNA-level tda"></td>
+	</tr>
+	<tr>
+	<th colspan="2" style="border: 5px solid #00DDAA">Treatment</th>
+	</tr>
+<!--no_treatment -->
+	<tr style="display:none;" class="inner">
+	<td colspan="2">
+		<table class="inner" width="100%">
+<!-- 6 mouths-->
+		<table class="inner" border bgcolor="#ffff00">
+			<tr>
+				<td width="25%" align="center" bgcolor="gray" style="color:white; font-size: 20px;">Every 6 mouths</td>
+				<td rowspan="2">
+					<table>
+						<tr>
+							<th>DETECTION OF HCC'</th>
+						</tr>
+						<tr>
+							<td>(persons with cirrgosis or HCC family history)</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+<!-- 12 mouths-->
+		<table class="inner" border bgcolor="#ffff00">
+			<tr>
+				<td width="25%" align="center" bgcolor="gray" style="color:white; font-size: 20px;">Every 12 mouths</td>
+				<td rowspan="2">
+					<table>
+						<tr>
+							<th>DISEASE PROGRESSION AND/OR TREATMENT RESPONSE IN ALL'</th>
+						</tr>
+						<tr>
+							<td>&bull;&nbsp;Adherence at each visit, if on treatment<br>&bull;&nbsp;ALT, HBV DNA and HBeAg<br>&bull;&nbsp;Clinical criteria and NITs (APRI in adults or FlibroScan)</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+<!-- baseline and 12 mouths-->
+		<table class="inner" border bgcolor="#ffff00">
+			<tr>
+				<td width="25%" align="center" bgcolor="gray" style="color:white;font-size: 20px;">Baseline and every 12 mouths</td>
+				<td rowspan="2">
+					<table style="padding:5px auto">
+						<tr>
+							<th>TOXICITY MONITORING IN PERSONS ON TRESTMENT</th>
+						</tr>
+						<tr>
+							<td>Renal function<sup>g</sup> and  risk factors for renal dyfunction</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+
+			</td>
+<!--yes_treatment -->
+	<tr class="Treatment-yes" style="display:none;">
+	<td border bgcolor="#ffff00" width="100%" colspan="2" align="center">&bull;&nbsp;Lifelong treatment</td>
+	</tr>
+
+<!--notreatment -->
+	<tr class="no-treatment" style="display:none;">
+	<td border bgcolor="#ffff00" width="100%" colspan="2" align="center">&bull;&nbsp;No treatment. <br><a href="http://med.stanford.edu/liver.html">Learn More..</a></td>
+	</tr>
+
+
+		</table>
+
+
+	</tr>
+	</tbody>
+	</table>
+
+	
+
+	
+	<!-- .....Footer -->
+
+	<div align="center" id="recopy" >
+	<font color="black">&copy;<a href="http://med.stanford.edu/liver.html" target="_blank" title="Asian Liver Center at Stanford University">Asian Liver Center at Stanford University | 2016</a></font>
+	</div>
+
+</div>
+
+
+			<section id="caculator-apri">
+			
+				<header align="center" class="head-cal">
+					<br>
+					<hr>
+					<br>
+					<h3 align="left">APRI (aspartate aminotransferase [AST]-to-platelet ratio index) is recommended as the preferred non-invasive test (NIT) to assess for the presence of cirrhosis (APRI score >2 in adults) in resource-limited settings.</h3><br>
+				</header>
+
+
+<!-- next is the latest one-->
+				<form  class="ca" method="post" action="#"  autocomplete="on">
+					<fieldset>
+						<legend  align="center" style="font-size:2em;">
+							APRI Score Caculator
+						</legend>
+						
+
+						<label for="AST">AST Level (IU/L): </label>
+						<input class="input-ca" name="AST" type="number" placeholder="AST" text-align="center" step="0.1" min="0" ><br><br>
+
+						<label for="ULN">ULN Level (IU/L): </label>
+						<input class="input-ca" name="ULN" type="number" placeholder="Upper Limit of Normal" step="0.1" min="0" ><br><br>
+
+						<label for="PC">Platelet Count (10<sup>9</sup>/L): </label>
+						<input class="input-ca" name="PC" type="number" placeholder=" platelet count" step="0.1" min="0" >
+						<h4 align="left">APRI Score = (AST/ULN) x 100) / platelet count (10<sup>9</sup>/L)</h4>
+
+						<P>Your ARPI Score :</P>
+						<div id="show-result" class="result-ca" name="ca-result" type="number" align="left"></div> <br>	
+
+					</fieldset>
+				</form>
+
+				<section class="interpretation">
+					
+					<h1>Interpretation: <a class="back" href="#header1" algn="right" style="background-color:black; color:white;">Back to select</a></h1> 
+					<div class="interpretation-header">APRI score >2 in adults </div><br>
+					<div>As a priority, all adults, adolescents and children with CHB and clinical evidence of compensated or decompensated cirrhosis (or cirrhosis based on APRI score >2 in adults) should be treated, regardless of ALT levels, HBeAg status or HBV DNA levels. (Strong recommendation, moderate quality of evidence)</div><br><br>
+			
+					<div class="interpretation-header">APRI score ≤2 in adults</div><br>
+					<div>Treatment is recommended for adults with CHB who do not have clinical evidence of cirrhosis (or based on APRI score ≤2 in adults), but are aged more than 30 years (in particular), and have persistently abnormal ALT levels and evidence of highlevel HBV replication (HBV DNA >20 000 IU/mL), regardless of HBeAg status. (Strong recommendation, moderate quality of evidence)</div><br><br>
+					
+				</section>
+					
+			
+			</section>
+
+				<section id="caculator-fib">
+			
+				<header align="center" class="head-cal">
+					<br>
+					<hr>
+					<br>
+					<h3 align="left">FIB-4 (fibrosis-4 score) is a simple index for estimating hepatic fibrosis based on a calculation derived from AST, ALT and platelet concentrations, and age..</h3><br>
+				</header>
+
+
+<!-- next is the latest one-->
+				<form  class="ca" method="post" action="#"  autocomplete="on">
+					<fieldset>
+						<legend  align="center" style="font-size:2em;">
+							FIB-4 Score Caculator
+						</legend>
+						
+
+						<label for="AGE">Age (years): </label>
+						<input class="input-ca-fib" name="AGE-fib" type="number" placeholder="Age" text-align="center" step="1" min="0" ><br><br>
+
+						<label for="AST">AST Level (U/L): </label>
+						<input class="input-ca-fib" name="AST-fib" type="number" placeholder="AST Level" step="0.1" min="0" ><br><br>
+
+						<label for="PC">Platelet Count (10<sup>9</sup>/L): </label>
+						<input class="input-ca-fib" name="PC-fib" type="number" placeholder=" platelet count" step="0.1" min="0" ><br><br>
+
+						<label for="ALT">ALT (U/L): </label>
+						<input class="input-ca-fib" name="ALT-fib" type="number" placeholder=" ALT Level" step="0.1" min="0" >
+
+						<h4 align="left">FIB-4 Score= (Age x AST ) / (Platelet count x ALT<sup>1/2</sup>)</h4>
+						<P>Your ARPI Score :</P>
+						<div id="show-result-fib" class="result-ca-fib" name="ca-result-fib" type="number" align="left"></div> <br>	
+
+					</fieldset>
+				</form>
+
+				<section class="interpretation">
+					
+					<h1>Interpretation: <a class="back" href="#header1" algn="right" style="background-color:black; color:white;">Back to select</a></h1> 
+					<div class="interpretation-header">FIB-4 Score < 1.45 in adults </div><br>
+					<div>Using a lower cutoff value of 1.45, a FIB-4 score < 1.45 had a negative predictive value of 90% for advanced fibrosis (Ishak fibrosis score 4-6 which includes early bridging fibrosis to cirrhosis). </div><br><br>
+			
+					<div class="interpretation-header">FIB-4 Score > 3.25 in adults</div><br>
+					<div>A FIB-4 acore >3.25 would have a 97% specificity and a positive predictive value of 65% for advanced fibrosis. </div><br><br>
+					
+				</section>
+					
+			
+			</section>
+
+<!-- recommendation2-->
+
+
+<!-- recommendation3-->
+
+
+<!-- recommendation4-->
+
+
+
+</body>
+
+</html>
